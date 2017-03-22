@@ -1,0 +1,22 @@
+/* jQuery Gridly
+ * Copyright 2015 Kevin Sylvestre
+ * 1.2.9
+ */
+.gridly, .gridly > :not(.dragging) {
+  -webkit-transition: all 0.4s ease-in-out;
+  -moz-transition: all 0.4s ease-in-out;
+  transition: all 0.4s ease-in-out; }
+.gridly .dragging {
+  z-index: 800; }
+
+.delete {
+   display: block;
+   color: blue;
+   background: rgba(255, 255, 255, 0.2);
+   width: 30px;
+   height: 30px;
+   /* top: 0;
+   right: 0; */
+   position: inherit;
+   text-align: center;
+   line-height: 40px; }

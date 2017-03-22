@@ -1,0 +1,35 @@
+.container {
+	width:100%;
+	position: relative; }
+.container .brick {
+	opacity: 1;
+	cursor: pointer;
+	position: relative; }
+.container .brick .delete {
+	display: block;
+	color: white;
+	background: rgba(255, 255, 255, 0.2);
+	width: 40px;
+	height: 40px;
+	top: 0;
+	right: 0;
+	position: absolute;
+	text-align: center;
+	line-height: 40px; }
+.container .brick.small {
+	width: 500px;
+	height: 500px; }
+.container .brick.large {
+	width: 300px;
+	height: 300px; }
+.container .brick.dragging {
+	opacity: 0.8; } 
+.container .brick.small .header{
+	background: none repeat scroll 0% 0% #999;
+	display: block;
+	font-size: 20px;
+	line-height: normal;
+	padding: 4px 0px 6px;
+	margin-bottom: 5px;magin-top:5px;
+	cursor: move;
+	text-align:center;}

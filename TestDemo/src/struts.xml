@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts PUBLIC
+    "-//Apache Software Foundation//DTD Struts Configuration 2.3//EN"
+    "http://struts.apache.org/dtds/struts-2.3.dtd">
+    <struts>
+     	<constant name="struts.ognl.allowStaticMethodAccess" value="true"></constant>
+     	<constant name="struts.enable.DynamicMethodInvocation" value="true" />
+    	<package name="default" extends="struts-default">
+    		<action name="login" class="com.hy.action.TestAction">
+    			<result name="success">index.jsp</result>
+    		</action>
+    		<action name="common" class="com.hy.action.CommonAction">
+        		<result name="listSuccess">/test.jsp</result> 
+       		 </action>
+    	</package>
+    	
+    	<package name="struts2" extends="struts-default">
+    	<!-- 登陆 -->
+    		<!-- <action name="Login" class="loginServer">
+    			<result name="success" type="redirect">/result.jsp</result>
+    			<result name="input" type="redirect">/register.jsp</result>
+    		</action>  -->
+    		  <action name="Login" class="com.hy.action.LoginAction">
+    			<result name="success" type="redirect">/result.jsp</result>
+    			<result name="input" type="redirect">/register.jsp</result>
+    		</action> 
+    	<!-- 注册 -->
+    		<action name="RegAction" class="com.hy.action.RegAction">
+    			<result name="success" type="redirect">/indexsuccess.jsp</result>
+    			<result name="input" type="redirect">/registerfail.jsp</result>
+    		</action>
+    	</package> 
+    	
+    	<package name="reg" extends="struts-default">
+	    <action name="reg" class="reg">
+	        <result name="success">/regsuccess.jsp</result>
+
+			<result name="input">/reg.jsp</result>
+	    </action>
+	    
+	    
+	</package>
+    </struts>
